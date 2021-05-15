@@ -57,7 +57,7 @@ namespace LevenshteinAutomata
 					}
 				}
 			}
-			for each (char c in nfa->inputs)
+			for(char c: nfa->inputs)
 			{
 				std::list<int> next = EpsilonClosure(nfa, nfa->Move(aState, c));
 				if (next.empty()) continue;

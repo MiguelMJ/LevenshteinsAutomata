@@ -1,5 +1,6 @@
 #include "LevenshteinNFA.h"
-
+#include <cstdio>
+#include <string>
 
 namespace LevenshteinAutomata
 {
@@ -94,7 +95,9 @@ namespace LevenshteinAutomata
 	{
 		printf("This NFA has %d states: 0 - %d\n", size, size - 1);
 		printf("The initial state is %d\n", initialState);
-		printf("The final state is %d\n", finalStates);
+        for(auto& i: finalStates){
+            printf("A final state is %d\n", i);
+        }
 		for (int from = 0; from < size; ++from)
 		{
 			for (int to = 0; to < size; ++to)
